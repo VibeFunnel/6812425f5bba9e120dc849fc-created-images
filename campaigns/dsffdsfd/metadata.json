@@ -1,0 +1,15 @@
+{
+  "id": "6862a9c440a391cd287e0473",
+  "name": "dsffdsfd",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "description": "fdggdfgdf",
+  "createdAt": "2025-06-30T15:14:12.892Z",
+  "updatedAt": "2025-06-30T15:14:12.904Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6862a9c440a391cd287e047a",
+      "file": "variant-1.html"
+    }
+  ]
+}

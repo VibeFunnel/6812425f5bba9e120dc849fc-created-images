@@ -1,0 +1,487 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtherMail - Web3 Email Interface for Blockchain Access | Secure Web3 Wallet</title>
+    <meta name="description" content="Access and manage your Web3 assets through email with EtherMail. The simplest way to interact with blockchain technology using your existing email account.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="EtherMail - Web3 Email Interface for Blockchain Access">
+    <meta property="og:description" content="Access and manage your Web3 assets through email with EtherMail. The simplest way to interact with blockchain technology.">
+    <meta property="og:image" content="https://ethermail.io/og-image.jpg">
+    <meta property="og:url" content="https://ethermail.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EtherMail - Web3 Email Interface">
+    <meta name="twitter:description" content="Access and manage your Web3 assets through email with EtherMail. The simplest way to interact with blockchain technology.">
+    <meta name="twitter:image" content="https://ethermail.io/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ethermail.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script src="http://localhost:3001/uploads/assets/tailwind-3.4.16.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#4F46E5',
+                            light: '#6366F1',
+                            dark: '#4338CA',
+                        },
+                        secondary: {
+                            DEFAULT: '#3B82F6',
+                            light: '#60A5FA',
+                            dark: '#2563EB',
+                            bg: 'rgba(59, 130, 246, 0.1)',
+                            bg20: 'rgba(59, 130, 246, 0.2)',
+                        },
+                        accent: {
+                            DEFAULT: '#10B981',
+                            light: '#34D399',
+                            dark: '#059669',
+                            bg: 'rgba(16, 185, 129, 0.1)',
+                            bg20: 'rgba(16, 185, 129, 0.2)',
+                        },
+                    },
+                    fontFamily: {
+                        primary: ['Roboto', 'sans-serif'],
+                        secondary: ['Arial', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #4F46E5;
+            --color-primary-light: #6366F1;
+            --color-primary-dark: #4338CA;
+            --color-secondary: #3B82F6;
+            --color-secondary-light: #60A5FA;
+            --color-secondary-dark: #2563EB;
+            --color-accent: #10B981;
+            --color-accent-light: #34D399;
+            --color-accent-dark: #059669;
+        }
+    </style>
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EtherMail",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "description": "EtherMail is a Web3 email interface that allows users to access and manage blockchain assets through their email."
+    }
+    </script>
+</head>
+<body class="font-primary text-gray-800 bg-white">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <img alt="EtherMail logo" class="h-10 lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/logos/logo-1750078101778-228803482.svg">
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center" aria-label="Toggle mobile menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#features" class="font-medium text-gray-700 hover:text-primary transition-colors">Features</a></li>
+                <li><a href="#how-it-works" class="font-medium text-gray-700 hover:text-primary transition-colors">How It Works</a></li>
+                <li><a href="#faqs" class="font-medium text-gray-700 hover:text-primary transition-colors">FAQs</a></li>
+            </ul>
+            
+            <div class="hidden md:block">
+                <button class="bg-secondary hover:bg-secondary-dark text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-md">Sign up / Login</button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <ul class="px-4 py-3 space-y-3">
+                <li><a href="#features" class="block font-medium text-gray-700 hover:text-primary">Features</a></li>
+                <li><a href="#how-it-works" class="block font-medium text-gray-700 hover:text-primary">How It Works</a></li>
+                <li><a href="#faqs" class="block font-medium text-gray-700 hover:text-primary">FAQs</a></li>
+                <li class="pt-2">
+                    <button class="w-full bg-secondary hover:bg-secondary-dark text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-md">Sign up / Login</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-gradient-to-br from-secondary-bg20 to-accent-bg20 min-h-[80vh] flex items-center py-16" id="hero">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+                <div class="hero-content max-w-lg">
+                    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">Dive into Web3 with EtherMail</h1>
+                    <p class="text-xl text-gray-700 mb-8">The easiest way to access, interact with and manage your Web3 assets - all through your email. No technical knowledge required.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-lg text-lg">Get Started Free</button>
+                        <button class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-8 rounded-lg transition-colors shadow-lg text-lg border border-primary">Watch Demo</button>
+                    </div>
+                </div>
+                <div class="hero-media mt-6 md:mt-0">
+                    <video controls="" poster="https://picsum.photos/600/400" class="w-full rounded-xl shadow-xl">
+                        <source src="#" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-primary mb-12">Trusted by Leading Web3 Companies</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+                    <img alt="Partner company logo 1" class="max-h-12 grayscale hover:grayscale-0 transition-all lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1749289223222-768072486.jpeg">
+                    <img alt="Partner company logo 2" class="max-h-12 grayscale hover:grayscale-0 transition-all lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1749289223222-768072486.jpeg">
+                    <img alt="Partner company logo 3" class="max-h-12 grayscale hover:grayscale-0 transition-all lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1749289223222-768072486.jpeg">
+                    <img alt="Partner company logo 4" class="max-h-12 grayscale hover:grayscale-0 transition-all lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1749289223222-768072486.jpeg">
+                    <img alt="Partner company logo 5" class="max-h-12 grayscale hover:grayscale-0 transition-all lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1749289223222-768072486.jpeg">
+                </div>
+            </div>
+        </section>
+
+        <section class="features py-20" id="features">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-primary mb-4">Key Features</h2>
+                <p class="text-xl text-center text-gray-700 mb-16 max-w-3xl mx-auto">Discover how EtherMail makes Web3 accessible to everyone, regardless of technical expertise.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow h-full">
+                        <div class="feature-icon text-4xl mb-4">🔓</div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Unlock Web3 with Social Log-ins</h3>
+                        <p class="text-gray-700">Access blockchain services seamlessly using your existing social accounts. No complicated wallets or seed phrases to remember.</p>
+                    </article>
+                    <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow h-full">
+                        <div class="feature-icon text-4xl mb-4">💰</div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Onramp with Ease</h3>
+                        <p class="text-gray-700">Purchase crypto directly within EtherMail using credit cards or bank transfers. Simple, secure, and straightforward for beginners and experts alike.</p>
+                    </article>
+                    <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow h-full">
+                        <div class="feature-icon text-4xl mb-4">🌐</div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Web3 Interactions Made Easy</h3>
+                        <p class="text-gray-700">Interact with decentralized applications smoothly through a familiar email interface. Web3 simplified for everyone, no technical knowledge required.</p>
+                    </article>
+                    <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow h-full">
+                        <div class="feature-icon text-4xl mb-4">📤</div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Sending &amp; Claiming Assets</h3>
+                        <p class="text-gray-700">Transfer and receive digital assets as easily as sending an email. PayPal-like simplicity for blockchain transactions with enhanced security.</p>
+                    </article>
+                    <article class="feature-card bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow h-full md:col-span-2 lg:col-span-1">
+                        <div class="feature-icon text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-3">Transaction Tracker</h3>
+                        <p class="text-gray-700">Monitor all your blockchain activities directly in your email inbox. Complete visibility of your Web3 journey with detailed transaction history.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works py-20 bg-secondary-bg" id="how-it-works">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-primary mb-4">How It Works</h2>
+                <p class="text-xl text-center text-gray-700 mb-16 max-w-3xl mx-auto">Three simple steps to transform your email into a powerful Web3 gateway</p>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="order-2 md:order-1">
+                        <img alt="User accessing EtherMail through Gmail login" class="rounded-xl shadow-lg w-full lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1749566782841-702203727.png">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <span class="inline-block bg-primary text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mb-4">1</span>
+                        <h3 class="text-2xl font-bold text-primary-dark mb-4">Frictionless Gateway to Web3</h3>
+                        <p class="text-gray-700 text-lg mb-4">Access your EtherMail Inbox using Gmail or Apple credentials. No complicated setup, just instant Web3 access.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>No seed phrases to remember</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Works with existing email accounts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Instant setup in under 30 seconds</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                    <div>
+                        <span class="inline-block bg-primary text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mb-4">2</span>
+                        <h3 class="text-2xl font-bold text-primary-dark mb-4">Know What You Sign</h3>
+                        <p class="text-gray-700 text-lg mb-4">View a complete preview of your transaction before signing. Full transparency for peace of mind.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Clear transaction details</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Fee estimates before confirming</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Anti-scam protection built-in</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img alt="Transaction preview interface showing details before signing" class="rounded-xl shadow-lg w-full lazy" data-src="http://localhost:3001/uploads/media/common/default-1024x1024.jpg">
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img alt="Two-factor verification process for transaction security" class="rounded-xl shadow-lg w-full lazy" data-src="http://localhost:3001/uploads/media/common/default-1024x1024.jpg">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <span class="inline-block bg-primary text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mb-4">3</span>
+                        <h3 class="text-2xl font-bold text-primary-dark mb-4">Two Factor Transactions</h3>
+                        <p class="text-gray-700 text-lg mb-4">Enhanced security prevents sending to incorrect wallets. Double verification for all your transactions.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Prevents accidental transfers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Bank-grade security protocols</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Optional biometric confirmation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-primary mb-16">What Our Users Say</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="text-accent">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">"EtherMail has completely transformed how I interact with Web3. As someone who's not tech-savvy, this is exactly what I needed to enter the blockchain space."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-medium">Sarah K.</h4>
+                                <p class="text-sm text-gray-500">Digital Artist</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="text-accent">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">"I've been in crypto for years and struggled to get my non-technical friends involved. EtherMail has changed that - it's the perfect onboarding tool for Web3 newcomers."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-medium">Michael T.</h4>
+                                <p class="text-sm text-gray-500">Blockchain Developer</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="text-accent">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-6">"The security features of EtherMail give me peace of mind. Two-factor verification for transactions has saved me from making costly mistakes multiple times."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                                <h4 class="font-medium">David L.</h4>
+                                <p class="text-sm text-gray-500">Business Owner</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta py-20 bg-gradient-to-r from-accent-bg20 to-secondary-bg20 text-center">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl font-bold text-primary mb-6">Ready to Experience Web3 Made Simple?</h2>
+                <p class="text-xl text-gray-700 mb-8">Join thousands of users who have already simplified their Web3 journey with EtherMail. Limited-time free account setup available now!</p>
+                <button class="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-lg text-lg mb-10">Get Started Free</button>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://ethermail.io/guides/ios" class="app-badge hover:opacity-90 transition-opacity">
+                        <img alt="Apple App Store download badge" class="h-12 rounded lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1750087287026-695277840.jpg">
+                    </a>
+                    <a href="https://ethermail.io/guides/android" class="app-badge hover:opacity-90 transition-opacity">
+                        <img alt="Google Play Store download badge" class="h-12 rounded lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/media-1750078335705-148775042.jpeg">
+                    </a>
+                    <a href="https://ethermail.io/mobile-app" class="app-badge hover:opacity-90 transition-opacity">
+                        <img alt="Web application access badge" class="h-12 rounded lazy" data-src="http://localhost:3001/uploads/media/common/default-1792x1024.jpg">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faqs py-20 bg-white" id="faqs">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl font-bold text-center text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-center text-gray-700 mb-12">Got questions? We've got answers. If you don't see what you're looking for, reach out to our support team.</p>
+                <div class="space-y-6">
+                    <details class="faq-item bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                        <summary class="p-5 cursor-pointer font-medium text-lg flex items-center justify-between hover:bg-gray-100 transition-colors">
+                            What's the new update Email-as-a-Wallet (EaaW) about?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <p class="p-5 pt-0 text-gray-700">Email-as-a-Wallet (EaaW) transforms your email into a fully functional Web3 wallet, allowing you to send, receive, and manage crypto assets directly through your inbox without needing a separate wallet application.</p>
+                    </details>
+                    <details class="faq-item bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                        <summary class="p-5 cursor-pointer font-medium text-lg flex items-center justify-between hover:bg-gray-100 transition-colors">
+                            How can I create my Email-as-a-Wallet?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <p class="p-5 pt-0 text-gray-700">Simply sign up for EtherMail using your existing email address or social login. Your Email-as-a-Wallet is automatically created and ready to use immediately with no technical setup required.</p>
+                    </details>
+                    <details class="faq-item bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                        <summary class="p-5 cursor-pointer font-medium text-lg flex items-center justify-between hover:bg-gray-100 transition-colors">
+                            How does EtherMail's Email-as-a-Wallet (EaaW) technology work with other Web3 products?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <p class="p-5 pt-0 text-gray-700">EtherMail's EaaW technology is designed to seamlessly integrate with existing Web3 products, protocols, and dApps. You can interact with DeFi platforms, NFT marketplaces, and other blockchain applications directly through your email interface.</p>
+                    </details>
+                    <details class="faq-item bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                        <summary class="p-5 cursor-pointer font-medium text-lg flex items-center justify-between hover:bg-gray-100 transition-colors">
+                            Is EtherMail secure? How do you protect my assets?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <p class="p-5 pt-0 text-gray-700">EtherMail employs bank-grade security protocols including two-factor authentication, biometric verification, and advanced encryption. Your private keys are never stored on our servers and all transactions require explicit approval through multiple verification steps.</p>
+                    </details>
+                    <details class="faq-item bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                        <summary class="p-5 cursor-pointer font-medium text-lg flex items-center justify-between hover:bg-gray-100 transition-colors">
+                            What blockchain networks does EtherMail support?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <p class="p-5 pt-0 text-gray-700">EtherMail currently supports Ethereum, Polygon, Binance Smart Chain, Solana, and Avalanche with more networks being added regularly. Our goal is to provide a unified interface for all major blockchain networks.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <img alt="EtherMail logo" class="h-10 mb-4 lazy" data-src="http://localhost:3001/uploads/media/6812425f5bba9e120dc849fc/logos/logo-1750078107286-690564654.svg">
+                    <p class="text-gray-400 mb-4">The simplest way to access Web3 through your email.</p>
+                    <p class="text-gray-400">© 2023 EtherMail. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://ethermail.io/legal/terms-and-conditions" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="https://ethermail.io/legal/privacy-policy" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://ethermail.io/help" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <span class="mr-2">🐦</span> Twitter
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <span class="mr-2">💬</span> Discord
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <span class="mr-2">✈️</span> Telegram
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>Secured by industry-leading encryption and privacy standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = document.querySelectorAll('img[data-src]');
+            lazyImages.forEach(img => {
+                img.setAttribute('src', img.getAttribute('data-src'));
+                img.onload = () => {
+                    img.removeAttribute('data-src');
+                };
+            });
+        });
+    </script>
+
+</body></html>
