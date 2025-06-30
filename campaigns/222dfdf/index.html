@@ -1,8 +1,9 @@
-<html><head><script>
+<html>
+  <script>
     (function(d, s, id){
       if (d.getElementById(id)) return;
       var js = d.createElement(s); js.id = id;
-      js.src = "http://127.0.0.1:3001/v1/sdk.js";
+      js.src = "http://localhost:3001/v1/sdk.js";
       js.async = true;
       js.defer = true;
       js.onload = function() {
@@ -20,4 +21,4 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'vibefunnel-sdk'));
   </script>
-</head><body></body></html>
+</html>
