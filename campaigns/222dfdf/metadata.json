@@ -1,0 +1,15 @@
+{
+  "id": "6862ac9442815e9c3d02e568",
+  "name": "222dfdf",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "description": "dfafd",
+  "createdAt": "2025-06-30T15:26:12.421Z",
+  "updatedAt": "2025-06-30T15:26:12.442Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6862ac9442815e9c3d02e56f",
+      "file": "variant-1.html"
+    }
+  ]
+}
