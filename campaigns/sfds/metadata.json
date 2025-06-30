@@ -1,0 +1,15 @@
+{
+  "id": "6862a81340a391cd287e02ef",
+  "name": "sfds",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "description": "sdfsfdsfd",
+  "createdAt": "2025-06-30T15:06:59.417Z",
+  "updatedAt": "2025-06-30T15:06:59.433Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6862a81340a391cd287e02f6",
+      "file": "variant-1.html"
+    }
+  ]
+}
