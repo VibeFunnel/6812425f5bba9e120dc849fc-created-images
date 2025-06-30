@@ -1,0 +1,15 @@
+{
+  "id": "6862a93d40a391cd287e03ab",
+  "name": "sfgsgf",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "description": "fgsfsg",
+  "createdAt": "2025-06-30T15:11:57.310Z",
+  "updatedAt": "2025-06-30T15:11:57.337Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6862a93d40a391cd287e03b2",
+      "file": "variant-1.html"
+    }
+  ]
+}
