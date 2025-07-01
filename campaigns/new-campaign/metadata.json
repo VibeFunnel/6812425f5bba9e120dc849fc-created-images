@@ -1,0 +1,15 @@
+{
+  "id": "6863daea5c29b0f89798f0d1",
+  "name": "new campaign",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "description": "try me out",
+  "createdAt": "2025-07-01T12:56:10.206Z",
+  "updatedAt": "2025-07-01T12:56:10.221Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6863daea5c29b0f89798f0d8",
+      "file": "variant-1.html"
+    }
+  ]
+}
