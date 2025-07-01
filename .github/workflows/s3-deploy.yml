@@ -1,0 +1,19 @@
+name: Default CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-to-s3:
+    uses: VibeFunnel/centralized-workflows/.github/workflows/s3-deploy.yml@master
+    with:
+      source_dir: '.'
+      dest_dir: 6812425f5bba9e120dc849fc/created-images
+      delete_flag: true
+    secrets:
+      S3_BUCKET_NAME: ${{ vars.S3_BUCKET_NAME }}-development
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
