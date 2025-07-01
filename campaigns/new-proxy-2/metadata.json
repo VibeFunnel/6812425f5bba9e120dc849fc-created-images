@@ -1,0 +1,15 @@
+{
+  "id": "6863f79e8aa37a2facb978b0",
+  "name": "new proxy 2",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "description": "asdasd",
+  "createdAt": "2025-07-01T14:58:38.049Z",
+  "updatedAt": "2025-07-01T14:58:38.061Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6863f79e8aa37a2facb978b7",
+      "file": "variant-1.html"
+    }
+  ]
+}
