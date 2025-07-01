@@ -1,0 +1,15 @@
+{
+  "id": "6863f6f92175e52c5d880ac7",
+  "name": "new proxy",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "description": "try ",
+  "createdAt": "2025-07-01T14:55:53.087Z",
+  "updatedAt": "2025-07-01T14:55:53.096Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6863f6f92175e52c5d880ace",
+      "file": "variant-1.html"
+    }
+  ]
+}
