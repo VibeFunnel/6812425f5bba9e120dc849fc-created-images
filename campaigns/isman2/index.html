@@ -1,0 +1,23 @@
+<html><head><script>
+    (function(d, s, id){
+      if (d.getElementById(id)) return;
+      var js = d.createElement(s); js.id = id;
+      js.src = "http://dev-cdn.vibefunnel.ai/v1/sdk.js";
+      js.async = true;
+      js.defer = true;
+      js.onload = function() {
+        if (window.VibeFunnel) {
+          window.VibeFunnel.loadMetadata()
+            .then(() => {
+              window.VibeFunnel.loadContent();
+            })
+            .catch(error => {
+              console.error('VibeFunnel: Failed to load metadata', error);
+            });
+        }
+      };
+      var fjs = d.getElementsByTagName(s)[0];
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'vibefunnel-sdk'));
+  </script>
+</head><body></body></html>

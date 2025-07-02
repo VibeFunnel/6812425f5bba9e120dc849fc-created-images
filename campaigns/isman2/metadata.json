@@ -1,0 +1,16 @@
+{
+  "id": "6864fcb1507a0c43249ce6ed",
+  "name": "isman2",
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "isManaged": true,
+  "description": "asdasdads",
+  "createdAt": "2025-07-02T09:32:33.161Z",
+  "updatedAt": "2025-07-02T09:32:33.173Z",
+  "templateId": "product",
+  "variants": [
+    {
+      "id": "6864fcb1507a0c43249ce6f4",
+      "file": "variant-1.html"
+    }
+  ]
+}
