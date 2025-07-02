@@ -1,11 +1,11 @@
 {
-  "id": "6864fd58507a0c43249ce7ed",
+  "id": "6864fee8507a0c43249ce841",
   "name": "new proxy 2",
-  "repositoryId": null,
-  "isManaged": false,
+  "repositoryId": "6862a7b140a391cd287e024c",
+  "isManaged": true,
   "description": "Imported from Git",
-  "createdAt": "2025-07-02T09:35:20.923Z",
-  "updatedAt": "2025-07-02T09:35:20.938Z",
+  "createdAt": "2025-07-02T09:42:00.592Z",
+  "updatedAt": "2025-07-02T09:42:03.814Z",
   "templateId": null,
   "variants": []
 }
