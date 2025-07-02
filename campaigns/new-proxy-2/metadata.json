@@ -1,15 +1,11 @@
 {
-  "id": "6863f79e8aa37a2facb978b0",
+  "id": "6864fd58507a0c43249ce7ed",
   "name": "new proxy 2",
-  "repositoryId": "6862a7b140a391cd287e024c",
-  "description": "asdasd",
-  "createdAt": "2025-07-01T14:58:38.049Z",
-  "updatedAt": "2025-07-02T08:50:23.833Z",
-  "templateId": "product",
-  "variants": [
-    {
-      "id": "6863f79e8aa37a2facb978b7",
-      "file": "variant-1.html"
-    }
-  ]
+  "repositoryId": null,
+  "isManaged": false,
+  "description": "Imported from Git",
+  "createdAt": "2025-07-02T09:35:20.923Z",
+  "updatedAt": "2025-07-02T09:35:20.938Z",
+  "templateId": null,
+  "variants": []
 }
